@@ -22,8 +22,8 @@ export default function App() {
   const [obstaclesNegHeightTwo, setObstaclesNegHeightTwo] = useState(0);
   const obstacleWidth = 60;
   const obstacleHeight = 300;
-  const gap = 150;
-  const gravity = 4;
+  const gap = 180;
+  const gravity = 3;
   const [score, setScore] = useState(0)
 
   let gameTimerId;
