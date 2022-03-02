@@ -1,27 +1,38 @@
 import React from "react";
-import { View } from 'react-native';
+import { View } from "react-native";
+import pipe from "../assets/pipe.jpeg";
 
-const Obstacles = ({obstaclesLeft, obstacleWidth, obstacleHeight, gap, randomBottom}) => {
+const Obstacles = ({
+  obstaclesLeft,
+  obstacleWidth,
+  obstacleHeight,
+  gap,
+  randomBottom,
+}) => {
   return (
     <>
-    <View style={{
-      position: 'absolute',
-      backgroundColor: 'grey',
-      width: obstacleWidth,
-      height: obstacleHeight,
-      left: obstaclesLeft,
-      bottom: randomBottom + obstacleHeight + gap,
-    }} />
-    <View style={{
-      position: 'absolute',
-      backgroundColor: 'grey',
-      width: obstacleWidth,
-      height: obstacleHeight,
-      left: obstaclesLeft,
-      bottom: randomBottom,
-    }} />
+      <img src={pipe} style={{
+            position: "absolute",
+            backgroundColor: "red",
+            width: obstacleWidth,
+            height: obstacleHeight,
+            left: obstaclesLeft,
+            bottom: randomBottom + obstacleHeight + gap,
+            transform: 'scaleY(-1)'
+          }}>
+      </img>
+      <img src={pipe}
+        style={{
+          position: "absolute",
+          backgroundColor: "grey",
+          width: obstacleWidth,
+          height: obstacleHeight,
+          left: obstaclesLeft,
+          bottom: randomBottom,
+        }}
+      />
     </>
-  )
-}
+  );
+};
 
-export default Obstacles
+export default Obstacles;

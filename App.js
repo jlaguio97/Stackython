@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import Bird from "./components/bird";
 import Obstacles from "./components/obstacles";
+import background from './assets/background.png'
 
 export default function App() {
   const screenWidth = Dimensions.get("screen").width;
@@ -21,7 +22,7 @@ export default function App() {
   const [obstaclesNegHeight, setObstaclesNegHeight] = useState(0);
   const [obstaclesNegHeightTwo, setObstaclesNegHeightTwo] = useState(0);
   const obstacleWidth = 60;
-  const obstacleHeight = 300;
+  const obstacleHeight = 380;
   const gap = 180;
   const gravity = 3;
   const [score, setScore] = useState(0)
@@ -136,7 +137,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundImage: `url(${background})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'repeat',
+    backgroundSize: 'cover',
     alignItems: "center",
     justifyContent: "center",
   },
